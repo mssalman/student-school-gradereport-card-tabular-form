@@ -1,0 +1,1605 @@
+<?php
+$servername = "localhost";
+$username = "XXXXXXXXXXXXX";
+$password = "XXXXXXXXXXXXX";
+$dbname = "XXXXXXXXXXXXXXXX";
+$sid='XXXXXXXX';
+
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+?>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border- 
+style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px  
+5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+<tr>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>Subjects</em></strong>
+
+<strong><em> </em></strong>
+
+<strong><em> </em></strong>
+
+<strong><em> </em></strong></th>
+<th class=“tg-yw4l” colspan="10" rowspan="3" ><strong><em>Formative Assessment I &amp; 
+
+II</em></strong></th>
+<th class=“tg-yw4l” colspan="5" ><strong><em>Summative Assessment I</em></strong></th>
+<th class=“tg-yw4l” colspan="5" rowspan="3" ><strong><em> </em></strong>
+
+<strong><em>Formative Assessment III</em></strong></th>
+<th class=“tg-yw4l” colspan="5" ><strong><em>Summative Assessment II</em></strong></th>
+<th class=“tg-yw4l” colspan="5" rowspan="2" ><strong><em>Formative Assessment 
+
+III</em></strong></th>
+<th class=“tg-yw4l” colspan="5" ><strong><em>Summative Assessment III</em></strong></th>
+</tr>
+<tr>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>Avg of F-I &amp; F-II</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em> </em></strong>
+
+<strong><em>SA-I</em></strong>
+
+<strong><em>Sept.</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em> </em></strong>
+
+<strong><em>T</em></strong><br>
+
+<strong><em>O</em></strong><br>
+
+<strong><em>T</em></strong><br>
+
+<strong><em>A</em></strong><br>
+
+<strong><em>L</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" >
+
+<strong><em>G</em></strong><br>
+
+<strong><em>R</em></strong><br>
+
+<strong><em>A</em></strong><br>
+
+<strong><em>D</em></strong><br>
+
+<strong><em>E</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em> </em></strong>
+
+<strong><em> G</em></strong>
+
+<strong><em>P</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>Avg of F-I,<br>II&amp; F-
+
+III</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em> </em></strong>
+
+<strong><em>SA-II</em></strong>
+
+<strong><em>Sept.</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em> </em></strong>
+
+<strong><em> </em></strong>
+
+<strong><em><strong><em>T</em></strong><br>
+
+<strong><em>O</em></strong><br>
+
+<strong><em>T</em></strong><br>
+
+<strong><em>A</em></strong><br>
+
+<strong><em>L</em></strong></em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>G</em></strong><br>
+
+<strong><em>R</em></strong><br>
+
+<strong><em>A</em></strong><br>
+
+<strong><em>D</em></strong><br>
+
+<strong><em>E</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em> </em></strong>
+
+<strong><em> G</em></strong>
+
+<strong><em>P</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>Avg of F-I,<br>II,III&amp; F-
+
+IV</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>SA-III</em></strong>
+
+<strong><em>March<br>/<br>April</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em> </em></strong>
+
+<strong><em><strong><em>T</em></strong><br>
+
+<strong><em>O</em></strong><br>
+
+<strong><em>T</em></strong><br>
+
+<strong><em>A</em></strong><br>
+
+<strong><em>L</em></strong></em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>G</em></strong><br>
+
+<strong><em>R</em></strong><br>
+
+<strong><em>A</em></strong><br>
+
+<strong><em>D</em></strong><br>
+
+<strong><em>E</em></strong></th>
+<th class=“tg-yw4l” rowspan="4" ><strong><em>G<br>P</em></strong></th>
+</tr>
+<tr>
+<th class=“tg-yw4l” colspan="5" rowspan="2" ><strong><em>FA-IV Feb</em></strong></th>
+</tr>
+<tr>
+<th class=“tg-yw4l” colspan="5" ><strong><em>FA-I June/July</em></strong></th>
+<th class=“tg-yw4l” colspan="5" ><strong><em>FA-II August</em></strong></th>
+<th class=“tg-yw4l” colspan="5" ><strong><em>FA-III Nov.</em></strong></th>
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Parameters FAs</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>2</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>3</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>4</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>T</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>2</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>3</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>4</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>T</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>2</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>3</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>4</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>T</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>2</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>3</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>4</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>T</em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>I-VIII</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50%</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>100</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>A1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50%</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>100</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>A1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>50% </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>100 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>A1 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10 </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>IX-X</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>80</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>100</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>A1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>80</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>100</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>A1</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>5 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>20 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>80 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>100 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>A1 </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>10 </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>I-Language</em></strong></th>
+<th class=“tg-yw4l” ><strong><em>
+
+<?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Reading (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1r1=$row['marks'];
+
+echo $ms1r1;
+}
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Writing (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1w1=$row['marks'];
+
+echo $ms1w1;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Speaking (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1s1=$row['marks'];
+
+echo $ms1s1;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Listening (Maximum Marks 20)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=1 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1l1=$row['marks'];
+
+echo $ms1l1;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+
+if (isset($ms1r1) && isset($ms1w1) && isset($ms1s1) && isset($ms1l1)) {
+    $tms1rwsl1= $ms1r1+$ms1w1+$ms1s1+$ms1l1;
+echo $tms1rwsl1;
+}
+
+?> </em></strong></th>
+
+
+
+
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Reading (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1r2=$row['marks'];
+
+echo $ms1r2;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Writing (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1w2=$row['marks'];
+
+echo $ms1w2;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Speaking (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1s2=$row['marks'];
+
+echo $ms1s2;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Listening (Maximum Marks 20)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=2 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1l2=$row['marks'];
+
+echo $ms1l2;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+
+if (isset($ms1r2) && isset($ms1w2) && isset($ms1s2) && isset($ms1l2)) {
+    $tms1rwsl2= $ms1r2+$ms1w2+$ms1s2+$ms1l2;
+echo $tms1rwsl2;
+}
+
+?> </em></strong></th>
+
+
+
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+
+
+
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Reading (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1r4=$row['marks'];
+
+echo $ms1r4;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Writing (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1w4=$row['marks'];
+
+echo $ms1w4;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Speaking (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1s4=$row['marks'];
+
+echo $ms1s4;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Listening (Maximum Marks 20)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=4 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1l4=$row['marks'];
+
+echo $ms1l4;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+
+
+if (isset($ms1r4) && isset($ms1w4) && isset($ms1s4) && isset($ms1l4)) {
+    $tms1rwsl4= $ms1r4+$ms1w4+$ms1s4+$ms1l4;
+echo $tms1rwsl4;
+}
+
+
+
+?> </em></strong></th>
+
+
+
+
+
+
+
+
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+<th class=“tg-yw4l” ><strong><em>s </em></strong></th>
+
+
+
+
+
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Reading (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1r6=$row['marks'];
+
+echo $ms1r6;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Writing (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1w6=$row['marks'];
+
+echo $ms1w6;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Speaking (Maximum Marks 10)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1s6=$row['marks'];
+
+echo $ms1s6;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6";
+
+
+$result = $conn->query($sql);
+
+
+$sub="Ist Language Listening (Maximum Marks 20)";
+while($row = $result->fetch_assoc()) {
+$subject=$row["subject_id"];
+
+
+$sql1 = "SELECT `sub_name`,`subid` FROM `wp_subject` WHERE `subid`= $subject";
+
+$result1 = $conn->query($sql1);
+
+$row1 = $result1->fetch_assoc();
+
+
+
+$sn=$row1['sub_name'];
+
+$sbid=$row1['subid'];
+
+
+
+if($sn == $sub)
+
+{
+
+$sql = "SELECT * FROM `wp_marks` WHERE `student_id`= $sid AND `exam_id`=6 AND 
+
+`subject_id`=$sbid";
+
+
+$result = $conn->query($sql);
+
+
+
+$row = $result->fetch_assoc();
+
+
+$ms1l6=$row['marks'];
+
+echo $ms1l6;
+}
+}
+?> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em><?php
+
+if (isset($ms1r6) && isset($ms1w6) && isset($ms1s6) && isset($ms1l6)) {
+    $tms1rwsl6= $ms1r6+$ms1w6+$ms1s6+$ms1l6;
+echo $tms1rwsl6;
+}
+
+?> </em></strong></th>
+
+
+
+
+
+
+
+
+
+
+
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>II-Language</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>English</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Mathematics</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>General Science</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Social Studies</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Total</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>General Knowledge</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Computer</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Arabic</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Class Average</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Percentage</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+<tr>
+<th class=“tg-yw4l” ><strong><em>Rank/Grade</em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+<th class=“tg-yw4l” ><strong><em> </em></strong></th>
+
+</tr>
+</tbody>
+</table>
